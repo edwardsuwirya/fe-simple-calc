@@ -21,7 +21,7 @@ const App = () => {
 
     const getCalcResult = async (opr) => {
         try {
-            const response = await axios.get('calc', {params: {num1: num1, num2: num2, opr: opr}});
+            const response = await axios.get('api/calc', {params: {num1: num1, num2: num2, opr: opr}});
             const calcResult = response.data.message;
             setResult(`The result is ${calcResult}`);
         } catch (e) {
